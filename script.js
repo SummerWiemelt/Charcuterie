@@ -70,17 +70,25 @@ const PageObjects = [
 showPage(pageIds.reservationPage);
 
 
-// function getCurrentPage() {
-//   var url = document.URL;
-//   // If the string ends with a /, remove it
-//   if (url && url.lastIndexOf("/") == url.length - 1) {
-//     url = url.slice(0, url.length - 1);
-//   }
-//   var lastSlashIndex = url.lastIndexOf("/");
-//   var pageId = url.slice(lastSlashIndex, url.length - 1)
-//   console.log(pageId)
-// }
-// getCurrentPage()
-// //print(document.URL)
-// currentPage = document.URL;
-
+var breakfastBeginnings = [
+  ["Avacado Toast", "Homeade bread of your choice (rye, wheat, or crossiont topped with seasoned avacado and a sunnyside egg", "$7"],
+  ["Gourmet Yogurt Parfait", "Description", "Price"],
+  ["Stuffed French Toast", "Description", "Price"],
+  ["Eggs Benedict", "Description", "Price"],
+  ["Croissant Breakfast Sandwhich", "Description", "Price"]
+]
+var breakfastBeginningsContainer = document.getElementById("BreakfastMenuItems")
+menuItems = "";
+for (var i = 0; i < breakfastBeginnings.length; i++ ) { 
+  console.log("test")
+  menuItems += '<div class="row justify-content-between menu-row">';
+  menuItems += '<div class="col-xs-6 menu-item">' + breakfastBeginnings[i][0] + '</div>';
+  menuItems += '<div class="col-xs-6">' + breakfastBeginnings[i][2] + '</div>';
+  menuItems += '</div>';
+  menuItems += '<div class="row menu-row">';
+  menuItems += '<div class="col-xs-6 menu-item-description">' + breakfastBeginnings[i][1] + '</div>';
+  menuItems += '</div>';
+  menuItems += '<hr class="menu-divider">';
+}
+console.log(menuItems)
+breakfastBeginningsContainer.innerHTML = menuItems;

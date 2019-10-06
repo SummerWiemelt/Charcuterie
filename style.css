@@ -28,12 +28,15 @@
   opacity: 0.8;
   border: 2px solid #e6e6e6;
 }
+
 .no-mobile-home-image {
   display: none;
 }
+
 .no-mobile-padding {
   padding: 0;
 }
+
 .reservation {
   position: absolute;
   top: 35%;
@@ -50,99 +53,17 @@
   opacity: 0.3;
 }
 
-/* Menu */
-.menu-content {
-  background: url(./items/menu/background.png);
-  border-top: 2px solid #e6e6e6;
-  padding: 0em;
-}
-.menu-container {
-  padding: 2em 1em 1em;
-  font-family: "EB Garamond", serif;
-  background: white;
-}
-.menu-header {
-  font-family: "EB Garamond", serif;
-  font-weight: 700;
-  font-size: 1.6em;
-}
-.menu-sub-header {
-  text-align: center;
-  padding: 1em 0em;
-}
-.menu-row {
-  padding: 0em 1em;
-}
-.menu-item-description {
-  color: #595959;
-}
-.menu-item {
-  font-size: 1.1em;
-}
-.divider {
-  margin: 0;
-}
-
-/* Events */
-.event-top-img-container,
-.event-container {
-  padding: 0;
-}
-.event-container {
-  background: url(./items/menu/background.png);
-  margin: 0;
-}
-.event-top-img {
-  width: 100%;
-  border-top: 1px solid #e6e6e6;
-  border-bottom: 1px solid #e6e6e6;
-  display: none;
-}
-.event-top-image-mobile {
-  width: 100%;
-  border-top: 1px solid #e6e6e6;
-  border-bottom: 1px solid #e6e6e6;
-}
-.event-header-col {
-  padding: 0em;
-}
-.event-header {
-  color: #333333;
-  font-family: "EB Garamond", serif;
-  font-size: 1.5em;
-  padding: 0.6em 0em 0em;
-  margin: 0em;
-}
-.events-row {
-  background-color: white;
-  border: 2px solid #e6e6e6;
-  border-radius: 0.3em;
-  padding: 1em;
-  margin: 0;
-}
-.events-items-container {
-  margin: 0em;
-  width: 100%;
-  padding: 0;
-}
-.events-text {
-  padding: 1em;
-  color: #595959;
-  font-family: "EB Garamond", serif;
-}
-.event-img {
-  width: 100%;
-}
-
 /* Gallery */
 .gallery-container {
   padding-bottom: 2em;
 }
+
 .gallery-col {
   display: flex;
   justify-content: center;
   padding: 0;
 }
+
 .gallery-image {
   padding: 0em 0em 1em;
 }
@@ -157,22 +78,92 @@
   margin: 0;
 }
 
-/* Contact */ 
+/* Menu */
+.menu-content {
+  background: url(./items/menu/background.png);
+  border-top: 2px solid #e6e6e6;
+  padding: 0em;
+}
+
+.menu-container {
+  padding: 2em 1em 1em;
+  font-family: "EB Garamond", serif;
+  background: white;
+}
+
+.menu-header {
+  font-family: "EB Garamond", serif;
+  font-weight: 700;
+  font-size: 1.6em;
+}
+
+.menu-sub-header {
+  text-align: center;
+  padding: 1em 0em;
+}
+
+.menu-row {
+  padding: 0em 1em;
+}
+
+.menu-item-description {
+  color: #595959;
+}
+
+.menu-item {
+  font-size: 1.1em;
+}
+
+.divider {
+  margin: 0;
+}
+
+/* Events */
+.events-content {
+  background: url(./items/menu/background.png);
+  padding: 0;
+}
+
+.events-container {
+  background: white;
+  font-family: "EB Garamond", serif;
+}
+
+.events-header-row {
+  padding: 2em 0em 1em;
+}
+
+.events-header {
+  font-family: "EB Garamond", serif;
+  font-weight: 700;
+  font-size: 1.6em;
+}
+.events-img {
+  width: 100%;
+}
+
+
+
+/* Contact */
 .contact-container {
   background: url(./items/menu/background.png);
   padding: 0em;
 }
+
 .contact-child-container {
   background: white;
 }
+
 .contact-header-row {
   padding: 2em 1em 1em;
 }
+
 .contact-header {
   font-family: "EB Garamond", serif;
   font-weight: 700;
   font-size: 1.4em;
 }
+
 .contact-col {
   display: flex;
   flex-direction: column;
@@ -180,24 +171,30 @@
   font-family: "EB Garamond", serif;
   padding: 1em 0em;
 }
+
 .contact-sub-header {
   color: black;
   font-size: 1.1em;
 }
+
 .contact-img-col {
   padding: 0em 3em;
 }
+
 .contact-img {
   opacity: 0.8;
 }
+
 .story-row {
   padding: 0em 0em 2em;
   margin: 0;
 }
+
 .story-text {
   font-family: "EB Garamond", serif;
   padding-top: 1em;
 }
+
 .story-img {
   padding-top: 1em;
   opacity: 0.8;
@@ -241,40 +238,40 @@
 
 /* ------------------------------- Media Queries ----------------------------*/
 @media only screen and (min-width: 576px) {
+
   /* home images */
   .no-mobile-padding {
     padding: 0.2vw;
   }
+
   /* reservation */
   .reservation {
     height: 8rem;
     width: 10rem;
     font-size: 1.3em;
   }
+
+  /* gallery */
+  .gallery-image {
+    padding: 0.5em;
+  }
+
   /* menu */
-  .menu-container, .contact-child-container {
+  .menu-container,
+  .contact-child-container,
+  .events-container {
     width: 60%;
   }
-  .menu-content {
-    padding: 3em 0em;
-  }
+
   .menu-subheader-background {
     padding: 0.5em;
     background-color: #f2f2f2;
     border: 2px solid #e9e9e9;
   }
-  /* events */
-  .event-top-img {
-    display: block;
-  }
-  .event-top-image-mobile {
-    display: none;
-  }
-  /* gallery */
-  .gallery-image {
-    padding: 0.5em;
-  }
-  /* Contact */
+
+  /* MULTIPLE */
+  .menu-content,
+  .events-content,
   .contact-container {
     padding: 3em 0em;
   }
@@ -304,6 +301,7 @@
   .reservation-container {
     padding-bottom: 1em;
   }
+
   .reservation {
     height: 9rem;
     width: 11rem;
@@ -335,10 +333,7 @@
     display: block;
   }
 
-  /* events */
-  .events-row {
-    margin: 1em 5em;
-  }
+
 }
 
 @media only screen and (min-width: 1200px) {
