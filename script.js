@@ -83,3 +83,4 @@ showPage(pageIds.reservationPage);
 // getCurrentPage()
 // //print(document.URL)
 // currentPage = document.URL;
+

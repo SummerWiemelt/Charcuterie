@@ -52,14 +52,13 @@
 
 /* Menu */
 .menu-content {
-  background: url(./items/menu/asanoha-400px.png);
+  background: url(./items/menu/background.png);
   border-top: 2px solid #e6e6e6;
-  padding: 3em 0em;
+  padding: 0em;
 }
 .menu-container {
-  padding: 1em;
+  padding: 2em 1em 1em;
   font-family: "EB Garamond", serif;
-  padding-top: 2em;
   background: white;
 }
 .menu-header {
@@ -74,6 +73,12 @@
 .menu-row {
   padding: 0em 1em;
 }
+.menu-item-description {
+  color: #595959;
+}
+.menu-item {
+  font-size: 1.1em;
+}
 .divider {
   margin: 0;
 }
@@ -84,7 +89,7 @@
   padding: 0;
 }
 .event-container {
-  background: url(./items/menu/asanoha-400px.png);
+  background: url(./items/menu/background.png);
   margin: 0;
 }
 .event-top-img {
@@ -144,7 +149,7 @@
 
 .gallery-header {
   font-family: "EB Garamond", serif;
-  font-size: 1.5em;
+  font-size: 1.4em;
   color: #333333;
   padding: 0.3em 0em 0.2em;
   border-top: 2px solid #e6e6e6;
@@ -152,14 +157,55 @@
   margin: 0;
 }
 
-
+/* Contact */ 
+.contact-container {
+  background: url(./items/menu/background.png);
+  padding: 0em;
+}
+.contact-child-container {
+  background: white;
+}
+.contact-header-row {
+  padding: 2em 1em 1em;
+}
+.contact-header {
+  font-family: "EB Garamond", serif;
+  font-weight: 700;
+  font-size: 1.4em;
+}
+.contact-col {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-family: "EB Garamond", serif;
+  padding: 1em 0em;
+}
+.contact-sub-header {
+  color: black;
+  font-size: 1.1em;
+}
+.contact-img-col {
+  padding: 0em 3em;
+}
+.contact-img {
+  opacity: 0.8;
+}
+.story-row {
+  padding: 0em 0em 2em;
+  margin: 0;
+}
+.story-text {
+  font-family: "EB Garamond", serif;
+  padding-top: 1em;
+}
+.story-img {
+  padding-top: 1em;
+  opacity: 0.8;
+  width: 100%;
+}
 
 
 /* Footer */
-/*.footer-container {
-  margin: 3em 0em 3em;
-}*/
-
 .footer-row {
   padding: 2em 1em;
   text-align: center;
@@ -195,42 +241,42 @@
 
 /* ------------------------------- Media Queries ----------------------------*/
 @media only screen and (min-width: 576px) {
-
   /* home images */
   .no-mobile-padding {
     padding: 0.2vw;
   }
-
   /* reservation */
   .reservation {
     height: 8rem;
     width: 10rem;
     font-size: 1.3em;
   }
-
   /* menu */
-  .menu-container {
+  .menu-container, .contact-child-container {
     width: 60%;
+  }
+  .menu-content {
+    padding: 3em 0em;
   }
   .menu-subheader-background {
     padding: 0.5em;
     background-color: #f2f2f2;
     border: 2px solid #e9e9e9;
   }
-
-
   /* events */
   .event-top-img {
     display: block;
   }
-
   .event-top-image-mobile {
     display: none;
   }
-
   /* gallery */
   .gallery-image {
     padding: 0.5em;
+  }
+  /* Contact */
+  .contact-container {
+    padding: 3em 0em;
   }
 }
 
@@ -246,6 +292,7 @@
   .banner-text {
     font-size: 0.9em;
     margin-left: -1.5em;
+    padding-top: 0.7em;
   }
 
   /* home images */
