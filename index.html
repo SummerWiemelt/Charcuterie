@@ -89,8 +89,11 @@
   <!--images 441 x 294px-->
   <div id="gallery-content" class="container-flex gallery-container">
     <span class="row justify-content-center gallery-header">Gallery</span>
+
     <div class="row no-gutters justify-content-center">
+
       <div class="col-12 col-sm-6 col-md-4 col-xl-3 gallery-col">
+
         <img alt="" src="./items/Gallery Images/restaurant-plate.jpg" class="img-fluid gallery-image" />
       </div>
       <div class="col-12 col-sm-6 col-md-4 col-xl-3 gallery-col">
@@ -142,6 +145,18 @@
   </div>
 
 
+  <!-- Gallery (JS dynamic) 
+  <div id="gallery-content" class="container-flex gallery-container">
+    <span class="row justify-content-center gallery-header">Gallery</span>
+    <div class="container" id="galleryItems">
+    </div>
+  </div> 
+-->
+
+
+
+
+
   <!-- Menu -->
   <div id="menu-content" class="menu-content display-none">
     <div class="container menu-container">
@@ -160,11 +175,73 @@
       </div>
       <div class="container" id="BreakfastMenuItems">
       </div>
+      <!--NEED TO MAKE  FUNCTION IN JS-->
+      <div class="row justify-content-between">
+        <div class="col menu-sub-header">
+          <div>
+            <h5>Lunch</h5>
+          </div>
+        </div>
+      </div>
+      <div class="container" id="lunchMenuItems">
+      </div>
     </div>
   </div>
 
+<!-- Events -->
+<div id="events-content" class="events-content display-none" data-ride="carousel">
+  <div class="container-fluid">
+<div class="row justif">
+  <div class="col-sm-3">
+    <div class="card">
+      <div class="card-body">
+        <img src="..." class="d-block w-100" alt="...">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="card">
+      <div class="card-body">
+        <img src="..." class="d-block w-100" alt="...">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="card">
+      <div class="card-body">
+        <img src="..." class="d-block w-100" alt="...">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="card">
+      <div class="card-body">
+        <img src="..." class="d-block w-100" alt="...">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
 
-  <!-- Events -->
+</div>
+
+
+
+
+
+  <!-- Events 
   <div id="events-content" class="events-content display-none">
     <div class="container events-container">
       <div class="row justify-content-center events-header-row">
@@ -172,15 +249,49 @@
           <h3 class="events-header">Events</h3>
         </div>
       </div>
-      <hr class="divider">
-      <div class="row justify-content-center">
-        <div class="col-md-6 events-col"><img src="./items/Events/grilling.jpg" class="events-img"></div>
-        <div class="col-md-6 events-col">test</div>
+      <hr class="divider events-divider">
+      <div class="row justify-content-center events-row">
+        <div class="col-lg-6 events-col"><img src="./items/Events/grilling.jpg" class="events-img"></div>
+        <div class="col-lg-6 events-col">
+          <h5 class="events-sub-header">Learn to cook with Kira</h5>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente voluptate aliquid, hic dolores,
+            deleniti laborum nulla cupiditate quidem, iure aut unde. Consectetur sunt </p>
+        </div>
       </div>
-
-
+      <div class="row justify-content-center events-row">
+        <div class="col-lg-6 events-col"><img src="./items/Events/grilling.jpg" class="events-img"></div>
+        <div class="col-lg-6 events-col">
+          <h5 class="events-sub-header">Learn to cook with Kira</h5>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente voluptate aliquid, hic dolores,
+            deleniti laborum nulla cupiditate quidem, iure aut unde. Consectetur sunt </p>
+        </div>
+      </div>
+      <div class="row justify-content-center events-row">
+        <div class="col-lg-6 events-col"><img src="./items/Events/grilling.jpg" class="events-img"></div>
+        <div class="col-lg-6 events-col">
+          <h5 class="events-sub-header">Learn to cook with Kira</h5>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente voluptate aliquid, hic dolores,
+            deleniti laborum nulla cupiditate quidem, iure aut unde. Consectetur sunt </p>
+        </div>
+      </div>
+      <div class="row justify-content-center events-row">
+        <div class="col-lg-6 events-col"><img src="./items/Events/grilling.jpg" class="events-img"></div>
+        <div class="col-lg-6 events-col">
+          <h5 class="events-sub-header">Learn to cook with Kira</h5>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente voluptate aliquid, hic dolores,
+            deleniti laborum nulla cupiditate quidem, iure aut unde. Consectetur sunt </p>
+        </div>
+      </div>
+      <div class="row justify-content-center events-row">
+        <div class="col-lg-6 events-col"><img src="./items/Events/grilling.jpg" class="events-img"></div>
+        <div class="col-lg-6 events-col">
+          <h5 class="events-sub-header">Learn to cook with Kira</h5>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente voluptate aliquid, hic dolores,
+            deleniti laborum nulla cupiditate quidem, iure aut unde. Consectetur sunt </p>
+        </div>
+      </div>
     </div>
-  </div>
+  </div> -->
 
 
 
@@ -219,7 +330,8 @@
       <hr class="divider">
       <div class="container story-container">
         <div class="row justify-content-center story-row">
-          <div class="col-12 story-text"> Charcutire specializes in fresh ingredients and simple French creations. Chef
+          <div class="col-12 story-text"> Charcutire specializes in fresh ingredients and simple French creations.
+            Chef
             Bordo has worked in the culinary industry for over 30 years before he decided to open Charcuterie. </div>
           <div class="col-lg-6"><img src="./items/Contact/contact-chef.jpg" class="img-fluid story-img"></div>
           <div class="col-lg-6 story-text story-desktop-margin"> Lorem ipsum, dolor sit amet consectetur adipisicing
@@ -249,10 +361,10 @@
             <label for="">
               <h5 class="footer-header">Never miss an event.</h5>
             </label>
-            <input type="email" class="form-control form" id="" placeholder="Enter email">
+            <input type="email" class="form-control form btn-outline-dark footer-form" id="" placeholder="Enter email">
             <small class="form-text text-muted"></small>
           </div>
-          <button type="submit" class="btn btn-secondary footer-content">Signup</button>
+          <button type="submit" class="btn btn-outline-dark footer-form footer-content">Signup</button>
         </form>
       </div>
 
@@ -267,21 +379,20 @@
         <p>M-Th 4:00-10:00pm<br>Fri, Sat 4:30-11:30pm<br> Sun 4:00-9:00pm</p>
       </div>
 
-      <div class="col-xs-2 desktop-footer">
+      <div class="col-xs-2 desktop-footer footer-content">
         <form>
-          <div class="form-group footer-content">
+          <div class="form-group">
             <label for="">
               <h5 class="footer-header">Say hello</h5>
             </label>
-            <textarea class="form-control" id="" rows="3" placeholder="Message"></textarea>
-            <input type="email" class="form-control form" id="" placeholder="Enter email">
-            <small class="form-text text-muted"></small>
+            <textarea class="form-control btn-outline-dark footer-form" id="" rows="3" placeholder="Message"></textarea>
           </div>
-          <button type="submit" class="btn btn-secondary footer-content">Submit</button>
+      <div class="col-xs-2 desktop-footer"></div>
+            <input type="email" class="form-control form btn-outline-dark footer-form" id="" placeholder="Enter email">
+            <small class="form-text text-muted"></small>
+          <button type="submit" class="btn btn-outline-dark footer-content footer-form">Submit</button>
         </form>
       </div>
-
-    </div class="row">
   </div>
 
 

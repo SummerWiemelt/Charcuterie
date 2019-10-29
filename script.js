@@ -1,3 +1,4 @@
+// Navigation
 const pageIds = {
   menuPage: "menu-content",
   menuButton: "menu-button",
@@ -69,9 +70,9 @@ const PageObjects = [
 
 showPage(pageIds.reservationPage);
 
-
+// Menu
 var breakfastBeginnings = [
-  ["Avacado Toast", "Homeade bread of your choice (rye, wheat, or crossiont topped with seasoned avacado and a sunnyside egg", "$7"],
+  ["Avacado Toast", "Homeade bread of your choice (rye, wheat, or crossiont topped with seasoned avacado and a basted egg", "$9"],
   ["Gourmet Yogurt Parfait", "Description", "Price"],
   ["Stuffed French Toast", "Description", "Price"],
   ["Eggs Benedict", "Description", "Price"],
@@ -92,3 +93,62 @@ for (var i = 0; i < breakfastBeginnings.length; i++ ) {
 }
 console.log(menuItems)
 breakfastBeginningsContainer.innerHTML = menuItems;
+
+/* NEED TO MAKE A FUNCTION 
+var lunchMenuItems = [
+  ["food", "description", "price"],
+  ["food", "description", "price"],
+  ["food", "description", "price"],
+  ["food", "description", "price"],
+  ["food", "description", "price"],
+  ["food", "description", "price"]
+]
+
+var lunchContainer = document.getElementById("LunchMenuItems")
+menuItems = "";
+for (var i = 0; i < lunchMenuItems.length; i++) {
+  console.log("test")
+  menuItems += '<div class="row justify-content-between menu-row">';
+  menuItems += '<div class="col-xs-6 menu-item">' + lunchMenuItems[i][0] + '</div>';
+  menuItems += '<div class="col-xs-6">' + lunchMenuItems[i][2] + '</div>';
+  menuItems += '</div>';
+  menuItems += '<div class="row menu-row">';
+  menuItems += '<div class="col-xs-6 menu-item-description">' + lunchMenuItems[i][1] + '</div>';
+  menuItems += '</div>';
+  menuItems += '<hr class="menu-divider">';
+}
+
+// Gallery 
+var galleryContent = [
+  ["./items/Gallery Images/restaurant-plate.jpg"],
+  ["./items/Gallery Images/salmon-dish.jpg"],
+  ["./items/Gallery Images/charcuterie-dish.jpg"],
+  ["./items/Gallery Images/customers-eating.jpg"],
+  ["./items/Gallery Images/shrimp-dish.jpg"],
+  ["./items/Gallery Images/pie.jpg"],
+  ["./items/Gallery Images/wine-and-food.jpg"],
+  ["./items/Gallery Images/lunch.jpg"],
+  ["./items/Gallery Images/steak-dish.jpg"],
+  ["./items/Gallery Images/burger.jpg"],
+  ["./items/Gallery Images/chef-working.jpg"],
+  ["./items/Gallery Images/kitchen.jpg"],
+  ["./items/Gallery Images/macaron-bowl.jpg"],
+  ["./items/Gallery Images/large-charcuterie-spread.jpg"],
+  ["./items/Gallery Images/empty-plate.jpg"],
+  ["./items/Gallery Images/breakfast-spread.jpg"]
+]
+
+var galleryContentContainer = document.getElementById("galleryItems")
+galleryImage = "";
+for (var i = 0; i < galleryContent.length; i++) {
+  galleryImage += '<div class="row no-gutters justify-content-center">';
+  galleryImage += '<div class="col-12 col-sm-6 col-md-4 col-xl-3 gallery-col">' + '<img src="' + galleryContent[i][0] + '"';
+  galleryImage += 'class="img-fluid gallery-image"/>';
+  galleryImage += '</div>';
+ }
+
+
+
+// TO DO: make menu a function + add dinner section
+// hide footer on mobile contact page 
+// reservation page */
