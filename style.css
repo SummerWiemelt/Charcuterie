@@ -59,36 +59,6 @@
   opacity: 0.3;
 }
 
-/******************************* Gallery *******************************/
-.gallery-container {
-  padding-bottom: 2em;
-  border-top: 1.5px solid #e6e6e6;
-}
-.gallery-margin {
-  max-width: 1400px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.gallery-col {
-  display: flex;
-  justify-content: center;
-  padding: 0;
-}
-
-.gallery-image {
-  padding: 0em 0em 1em;
-}
-
-.gallery-header {
-  font-family: "EB Garamond", serif;
-  font-size: 1.5em;
-  color: #333333;
-  padding: 0.5em 0em 0.3em;
-  width: 100%;
-  margin: 0;
-  
-}
 
 /******************************* Menu *******************************/
 .menu-content {
@@ -134,12 +104,14 @@
 .events-border {
   border-top: 1.5px solid #e6e6e6;
 }
+
 .events-content {
   max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1em;
 }
+
 .events-header {
   font-family: "EB Garamond", serif;
   font-weight: 400;
@@ -148,9 +120,11 @@
   justify-content: center;
   padding-top: 0.7em;
 }
+
 .card-col {
   padding: 0em 1em 2em;
 }
+
 .card {
   margin-top: 1em;
   border-radius: 0;
@@ -158,8 +132,41 @@
   height: 100%;
   border: none;
 }
+
 .card-title {
   padding-top: 0.5em;
+}
+
+/******************************* Gallery *******************************/
+.gallery-container {
+  padding-bottom: 2em;
+  border-top: 1.5px solid #e6e6e6;
+}
+
+.gallery-margin {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gallery-col {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.gallery-image {
+  padding: 0em 0em 1em;
+}
+
+.gallery-header {
+  font-family: "EB Garamond", serif;
+  font-size: 1.5em;
+  color: #333333;
+  padding: 0.5em 0em 0.3em;
+  width: 100%;
+  margin: 0;
+
 }
 
 /******************************* Contact *******************************/
@@ -224,7 +231,7 @@
 .footer-row {
   padding: 2em 1em;
   text-align: center;
-  border-top: 1.5px solid #e6e6e6; 
+  border-top: 1.5px solid #e6e6e6;
 }
 
 .tablet-footer,
@@ -283,11 +290,6 @@
     font-size: 1.3em;
   }
 
-  /* gallery */
-  .gallery-image {
-    padding: 0.5em;
-  }
-
   /* menu */
   .menu-container,
   .contact-child-container {
@@ -298,6 +300,11 @@
     padding: 0.5em;
     background-color: #f2f2f2;
     border: 1.5px solid #e9e9e9;
+  }
+
+  /* gallery */
+  .gallery-image {
+    padding: 0.5em;
   }
 
   /* MULTIPLE */
