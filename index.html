@@ -85,81 +85,10 @@
   </div>
 
 
-  <!-- Gallery -->
-  <!--images 441 x 294px-->
-  <div id="gallery-content" class="container-flex gallery-container">
-    <span class="row justify-content-center gallery-header">Gallery</span>
-
-    <div class="row no-gutters justify-content-center">
-
-      <div class="col-12 col-sm-6 col-md-4 col-xl-3 gallery-col">
-
-        <img alt="" src="./items/Gallery Images/restaurant-plate.jpg" class="img-fluid gallery-image" />
-      </div>
-      <div class="col-12 col-sm-6 col-md-4 col-xl-3 gallery-col">
-        <img alt="" src="./items/Gallery Images/salmon-dish.jpg" class="img-fluid gallery-image" />
-      </div>
-      <div class="col-12 col-sm-6 col-md-4 col-xl-3 gallery-col">
-        <img alt="" src="./items/Gallery Images/charcuterie-dish.jpg" class="img-fluid gallery-image" />
-      </div>
-      <div class="col-12 col-sm-6 col-md-4 col-xl-3 gallery-col">
-        <img alt="" src="./items/Gallery Images/customers-eating.jpg" class="img-fluid gallery-image" />
-      </div>
-      <div class="col-12 col-sm-6 col-md-4 col-xl-3 gallery-col">
-        <img alt="picture" src="./items/Gallery Images/shrimp-dish.jpg" class="img-fluid gallery-image" />
-      </div>
-      <div class="col-12 col-sm-6 col-md-4 col-xl-3 gallery-col">
-        <img alt="picture" src="./items/Gallery Images/pie.jpg" class="img-fluid gallery-image" />
-      </div>
-      <div class="col-12 col-sm-6 col-md-4 col-xl-3 gallery-col">
-        <img alt="picture" src="./items/Gallery Images/wine-and-food.jpg" class="img-fluid gallery-image" />
-      </div>
-      <div class="col-12 col-sm-6 col-md-4 col-xl-3 gallery-col">
-        <img alt="picture" src="./items/Gallery Images/lunch.jpg" class="img-fluid gallery-image" />
-      </div>
-      <div class="col-12 col-sm-6 col-md-4 col-xl-3 gallery-col">
-        <img alt="picture" src="./items/Gallery Images/steak-dish.jpg" class="img-fluid gallery-image" />
-      </div>
-      <div class="col-12 col-sm-6 col-md-4 col-xl-3 gallery-col">
-        <img alt="picture" src="./items/Gallery Images/burger.jpg" class="img-fluid gallery-image" />
-      </div>
-      <div class="col-12 col-sm-6 col-md-4 col-xl-3 gallery-col">
-        <img alt="picture" src="./items/Gallery Images/chef-working.jpg" class="img-fluid gallery-image" />
-      </div>
-      <div class="col-12 col-sm-6 col-md-4 col-xl-3 gallery-col">
-        <img alt="picture" src="./items/Gallery Images/kitchen.jpg" class="img-fluid gallery-image" />
-      </div>
-      <div class="col-12 col-sm-6 col-md-4 col-xl-3 gallery-col">
-        <img alt="picture" src="./items/Gallery Images/macaron-bowl.jpg" class="img-fluid gallery-image" />
-      </div>
-      <div class="col-12 col-sm-6 col-md-4 col-xl-3 gallery-col">
-        <img alt="picture" src="./items/Gallery Images/large-charcuterie-spread.jpg" class="img-fluid gallery-image" />
-      </div>
-      <div class="col-12 col-sm-6 col-md-4 col-xl-3 gallery-col">
-        <img alt="picture" src="./items/Gallery Images/empty-plate.jpg" class="img-fluid gallery-image" />
-      </div>
-      <div class="col-12 col-sm-6 col-md-4 col-xl-3 gallery-col">
-        <img alt="picture" src="./items/Gallery Images/breakfast-spread.jpg" class="img-fluid gallery-image" />
-      </div>
-    </div>
-  </div>
-
-
-  <!-- Gallery (JS dynamic) 
-  <div id="gallery-content" class="container-flex gallery-container">
-    <span class="row justify-content-center gallery-header">Gallery</span>
-    <div class="container" id="galleryItems">
-    </div>
-  </div> 
--->
-
-
-
-
 
   <!-- Menu -->
   <div id="menu-content" class="menu-content display-none">
-    <div class="container menu-container">
+    <div class="container menu-container shadow">
       <div class="row justify-content-center">
         <div>
           <h3 class="menu-header">Menu</h3>
@@ -188,112 +117,187 @@
     </div>
   </div>
 
-<!-- Events -->
-<div id="events-content" class="events-content display-none" data-ride="carousel">
-  <div class="container-fluid">
-<div class="row justif">
-  <div class="col-sm-3">
-    <div class="card">
-      <div class="card-body">
-        <img src="..." class="d-block w-100" alt="...">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+  <!-- Events -->
+  <div id="events-content" class="events-border display-none">
+    <div class="events-content">
+      <div class="container-fluid"><span class="events-header">Upcoming Events</span>
+        <div class="row">
+          <div class="col-sm-6 col-lg-4 col-xl-3 card-col">
+            <div class="card">
+              <div class="card-body shadow">
+                <img src="./items/events/wine-tasting.jpg" class="d-block w-100 shadow" alt="wine tasting">
+                <h5 class="card-title">Cheese and Wine Tasting</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-outline-dark">More Info</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 col-xl-3 card-col">
+            <div class="card">
+              <div class="card-body shadow">
+                <img src="./items/Events/charcuterie.jpg" class="d-block w-100 shadow" alt="charcuterie spread">
+                <h5 class="card-title">Learn the Art of Charcuterie</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-outline-dark">More Info</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 col-xl-3 card-col">
+            <div class="card">
+              <div class="card-body shadow">
+                <img src="./items/Events/bread-oven.jpg" class="d-block w-100 shadow" alt="...">
+                <h5 class="card-title">Bread Baking with Chef Raphael</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-outline-dark">More Info</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 col-xl-3 card-col">
+            <div class="card">
+              <div class="card-body shadow">
+                <img src="./items/Events/girls-talking.jpg" class="d-block w-100 shadow" alt="girls talking">
+                <h5 class="card-title">Sip and Social</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-outline-dark">More Info</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 col-xl-3 card-col">
+            <div class="card">
+              <div class="card-body shadow">
+                <img src="./items/Events/city-event.jpg" class="d-block w-100 shadow" alt="cooking sausages">
+                <h5 class="card-title">Join us at the Fall Festival</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-outline-dark">More Info</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 col-xl-3 card-col">
+            <div class="card">
+              <div class="card-body shadow">
+                <img src="./items/Events/woman-smiling.jpg" class="d-block w-100 shadow" alt="...">
+                <h5 class="card-title">Hiring Event</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-outline-dark">More Info</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 col-xl-3 card-col">
+            <div class="card">
+              <div class="card-body shadow">
+                <img src="./items/Events/fancy-macaroons.jpg" class="d-block w-100 shadow" alt="...">
+                <h5 class="card-title">Learn to Bake the Perfect Cake</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-outline-dark">More Info</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 col-xl-3 card-col">
+            <div class="card">
+              <div class="card-body shadow">
+                <img src="./items/Events/cheese.jpg" class="d-block w-100 shadow" alt="...">
+                <h5 class="card-title">Cheese Making and Tasting</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-outline-dark">More Info</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 col-xl-3 card-col">
+            <div class="card">
+              <div class="card-body shadow">
+                <img src="./items/Events/pretty-salad.jpg" class="d-block w-100 shadow" alt="...">
+                <h5 class="card-title">Learn the Basics of French Cuisine</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-outline-dark">More Info</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 col-xl-3 card-col">
+            <div class="card">
+              <div class="card-body shadow">
+                <img src="./items/Events/table-notepad.jpg" class="d-block w-100 shadow" alt="...">
+                <h5 class="card-title">3rd Annual Speed Dating Event</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-outline-dark">More Info</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <div class="col-sm-3">
-    <div class="card">
-      <div class="card-body">
-        <img src="..." class="d-block w-100" alt="...">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-3">
-    <div class="card">
-      <div class="card-body">
-        <img src="..." class="d-block w-100" alt="...">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-3">
-    <div class="card">
-      <div class="card-body">
-        <img src="..." class="d-block w-100" alt="...">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </div>
-</div>
-  </div>
-
-</div>
 
 
+  <!-- Gallery -->
+  <!--images 441 x 294px-->
+  <div id="gallery-content" class="container-flex gallery-container">
+    <div class="gallery-margin">
+      <span class="row justify-content-center gallery-header">Gallery</span>
 
+      <div class="row no-gutters justify-content-center">
 
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3 gallery-col">
 
-  <!-- Events 
-  <div id="events-content" class="events-content display-none">
-    <div class="container events-container">
-      <div class="row justify-content-center events-header-row">
-        <div>
-          <h3 class="events-header">Events</h3>
+          <img alt="" src="./items/Gallery Images/restaurant-plate.jpg" class="img-fluid gallery-image" />
         </div>
-      </div>
-      <hr class="divider events-divider">
-      <div class="row justify-content-center events-row">
-        <div class="col-lg-6 events-col"><img src="./items/Events/grilling.jpg" class="events-img"></div>
-        <div class="col-lg-6 events-col">
-          <h5 class="events-sub-header">Learn to cook with Kira</h5>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente voluptate aliquid, hic dolores,
-            deleniti laborum nulla cupiditate quidem, iure aut unde. Consectetur sunt </p>
+        <div class="col-12 col-sm-6 col-md-4 col-xl-3 gallery-col">
+          <img alt="" src="./items/Gallery Images/salmon-dish.jpg" class="img-fluid gallery-image" />
         </div>
-      </div>
-      <div class="row justify-content-center events-row">
-        <div class="col-lg-6 events-col"><img src="./items/Events/grilling.jpg" class="events-img"></div>
-        <div class="col-lg-6 events-col">
-          <h5 class="events-sub-header">Learn to cook with Kira</h5>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente voluptate aliquid, hic dolores,
-            deleniti laborum nulla cupiditate quidem, iure aut unde. Consectetur sunt </p>
+        <div class="col-12 col-sm-6 col-md-4 col-xl-3 gallery-col">
+          <img alt="" src="./items/Gallery Images/charcuterie-dish.jpg" class="img-fluid gallery-image" />
         </div>
-      </div>
-      <div class="row justify-content-center events-row">
-        <div class="col-lg-6 events-col"><img src="./items/Events/grilling.jpg" class="events-img"></div>
-        <div class="col-lg-6 events-col">
-          <h5 class="events-sub-header">Learn to cook with Kira</h5>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente voluptate aliquid, hic dolores,
-            deleniti laborum nulla cupiditate quidem, iure aut unde. Consectetur sunt </p>
+        <div class="col-12 col-sm-6 col-md-4 col-xl-3 gallery-col">
+          <img alt="" src="./items/Gallery Images/customers-eating.jpg" class="img-fluid gallery-image" />
         </div>
-      </div>
-      <div class="row justify-content-center events-row">
-        <div class="col-lg-6 events-col"><img src="./items/Events/grilling.jpg" class="events-img"></div>
-        <div class="col-lg-6 events-col">
-          <h5 class="events-sub-header">Learn to cook with Kira</h5>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente voluptate aliquid, hic dolores,
-            deleniti laborum nulla cupiditate quidem, iure aut unde. Consectetur sunt </p>
+        <div class="col-12 col-sm-6 col-md-4 col-xl-3 gallery-col">
+          <img alt="picture" src="./items/Gallery Images/shrimp-dish.jpg" class="img-fluid gallery-image" />
         </div>
-      </div>
-      <div class="row justify-content-center events-row">
-        <div class="col-lg-6 events-col"><img src="./items/Events/grilling.jpg" class="events-img"></div>
-        <div class="col-lg-6 events-col">
-          <h5 class="events-sub-header">Learn to cook with Kira</h5>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente voluptate aliquid, hic dolores,
-            deleniti laborum nulla cupiditate quidem, iure aut unde. Consectetur sunt </p>
+        <div class="col-12 col-sm-6 col-md-4 col-xl-3 gallery-col">
+          <img alt="picture" src="./items/Gallery Images/pie.jpg" class="img-fluid gallery-image" />
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-xl-3 gallery-col">
+          <img alt="picture" src="./items/Gallery Images/wine-and-food.jpg" class="img-fluid gallery-image" />
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-xl-3 gallery-col">
+          <img alt="picture" src="./items/Gallery Images/lunch.jpg" class="img-fluid gallery-image" />
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-xl-3 gallery-col">
+          <img alt="picture" src="./items/Gallery Images/steak-dish.jpg" class="img-fluid gallery-image" />
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-xl-3 gallery-col">
+          <img alt="picture" src="./items/Gallery Images/burger.jpg" class="img-fluid gallery-image" />
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-xl-3 gallery-col">
+          <img alt="picture" src="./items/Gallery Images/chef-working.jpg" class="img-fluid gallery-image" />
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-xl-3 gallery-col">
+          <img alt="picture" src="./items/Gallery Images/kitchen.jpg" class="img-fluid gallery-image" />
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-xl-3 gallery-col">
+          <img alt="picture" src="./items/Gallery Images/macaron-bowl.jpg" class="img-fluid gallery-image" />
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-xl-3 gallery-col">
+          <img alt="picture" src="./items/Gallery Images/large-charcuterie-spread.jpg"
+            class="img-fluid gallery-image" />
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-xl-3 gallery-col">
+          <img alt="picture" src="./items/Gallery Images/empty-plate.jpg" class="img-fluid gallery-image" />
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-xl-3 gallery-col">
+          <img alt="picture" src="./items/Gallery Images/breakfast-spread.jpg" class="img-fluid gallery-image" />
         </div>
       </div>
     </div>
-  </div> -->
+  </div>
 
 
+  <!-- Gallery (JS dynamic) 
+  <div id="gallery-content" class="container-flex gallery-container">
+    <span class="row justify-content-center gallery-header">Gallery</span>
+    <div class="container" id="galleryItems">
+    </div>
+  </div> 
+-->
 
   <!-- Contact -->
   <div id="contact-content" class="display-none contact-container">
@@ -387,13 +391,13 @@
             </label>
             <textarea class="form-control btn-outline-dark footer-form" id="" rows="3" placeholder="Message"></textarea>
           </div>
-      <div class="col-xs-2 desktop-footer"></div>
-            <input type="email" class="form-control form btn-outline-dark footer-form" id="" placeholder="Enter email">
-            <small class="form-text text-muted"></small>
+          <div class="col-xs-2 desktop-footer"></div>
+          <input type="email" class="form-control form btn-outline-dark footer-form" id="" placeholder="Enter email">
+          <small class="form-text text-muted"></small>
           <button type="submit" class="btn btn-outline-dark footer-content footer-form">Submit</button>
         </form>
       </div>
-  </div>
+    </div>
 
 
 
@@ -401,17 +405,17 @@
 
 
 
-  <!--End-->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-  </script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-  </script>
-  <script src="script.js"></script>
+    <!--End-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
