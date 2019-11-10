@@ -80,8 +80,8 @@ var breakfastBeginnings = [
 ]
 var breakfastBeginningsContainer = document.getElementById("BreakfastMenuItems")
 menuItems = "";
-for (var i = 0; i < breakfastBeginnings.length; i++ ) { 
-  console.log("test")
+for (var i = 0; i < breakfastBeginnings.length; i++) {
+
   menuItems += '<div class="row justify-content-between menu-row">';
   menuItems += '<div class="col-xs-6 menu-item">' + breakfastBeginnings[i][0] + '</div>';
   menuItems += '<div class="col-xs-6">' + breakfastBeginnings[i][2] + '</div>';
@@ -91,10 +91,9 @@ for (var i = 0; i < breakfastBeginnings.length; i++ ) {
   menuItems += '</div>';
   menuItems += '<hr class="menu-divider">';
 }
-console.log(menuItems)
+
 breakfastBeginningsContainer.innerHTML = menuItems;
 
-/* NEED TO MAKE A FUNCTION 
 var lunchMenuItems = [
   ["food", "description", "price"],
   ["food", "description", "price"],
@@ -104,10 +103,9 @@ var lunchMenuItems = [
   ["food", "description", "price"]
 ]
 
-var lunchContainer = document.getElementById("LunchMenuItems")
+var lunchContainer = document.getElementById("lunchMenuItems")
 menuItems = "";
 for (var i = 0; i < lunchMenuItems.length; i++) {
-  console.log("test")
   menuItems += '<div class="row justify-content-between menu-row">';
   menuItems += '<div class="col-xs-6 menu-item">' + lunchMenuItems[i][0] + '</div>';
   menuItems += '<div class="col-xs-6">' + lunchMenuItems[i][2] + '</div>';
@@ -117,6 +115,8 @@ for (var i = 0; i < lunchMenuItems.length; i++) {
   menuItems += '</div>';
   menuItems += '<hr class="menu-divider">';
 }
+
+lunchContainer.innerHTML = menuItems;
 
 // Gallery 
 var galleryContent = [
@@ -140,13 +140,15 @@ var galleryContent = [
 
 var galleryContentContainer = document.getElementById("galleryItems")
 galleryImage = "";
+galleryImage += '<div class="row no-gutters justify-content-center">';
 for (var i = 0; i < galleryContent.length; i++) {
-  galleryImage += '<div class="row no-gutters justify-content-center">';
-  galleryImage += '<div class="col-12 col-sm-6 col-md-4 col-xl-3 gallery-col">' + '<img src="' + galleryContent[i][0] + '"';
+  galleryImage += '<div class="col-12 col-sm-6 col-md-4 gallery-col">' + '<img src="' + galleryContent[i][0] + '"';
   galleryImage += 'class="img-fluid gallery-image"/>';
   galleryImage += '</div>';
- }
+}
+galleryImage += "</div>"
 
+galleryContentContainer.innerHTML = galleryImage;
 
 
 // TO DO: make menu a function + add dinner section

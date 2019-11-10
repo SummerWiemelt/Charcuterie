@@ -79,7 +79,7 @@
   font-family: "EB Garamond", serif;
   font-weight: 700;
   font-size: 1.6em;
-  color: #212529;
+  color: #3c4d57;
 }
 
 .menu-sub-header {
@@ -93,6 +93,8 @@
 
 .menu-item-description {
   color: #3c4d57;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8em;
 }
 
 .menu-item {
@@ -194,7 +196,7 @@
 .gallery-header {
   font-family: "EB Garamond", serif;
   font-size: 1.5em;
-  color: #212529;
+  color: #3c4d57;
   padding: 0.5em 0em 0.3em;
   width: 100%;
   margin: 0;
@@ -203,6 +205,8 @@
 
 /******************************* Contact *******************************/
 .contact-container {
+  background: url(./items/menu/round.png);
+  border-top: 1.5px solid #ecedee;
   padding: 0em;
 }
 
