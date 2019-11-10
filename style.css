@@ -4,7 +4,6 @@
 
 .btn-outline-dark {
   border-radius: 0;
-
 }
 
 /******************************* Banner *******************************/
@@ -17,10 +16,13 @@
 }
 
 /******************************* Navigation *******************************/
+
+/* JS make on everything but index */
+
 .nav-header {
   font-family: "EB Garamond", serif;
   font-weight: 700;
-  padding: 0px;
+
 }
 
 .nav-sub-header {
@@ -63,7 +65,7 @@
 /******************************* Menu *******************************/
 .menu-content {
   background: url(./items/menu/round.png);
-  border-top: 1.5px solid #e6e6e6;
+  border-top: 1.5px solid #ecedee;
   padding: 0em;
 }
 
@@ -77,6 +79,7 @@
   font-family: "EB Garamond", serif;
   font-weight: 700;
   font-size: 1.6em;
+  color: #212529;
 }
 
 .menu-sub-header {
@@ -89,7 +92,7 @@
 }
 
 .menu-item-description {
-  color: #595959;
+  color: #3c4d57;
 }
 
 .menu-item {
@@ -102,11 +105,11 @@
 
 /******************************* Events *******************************/
 .events-border {
-  border-top: 1.5px solid #e6e6e6;
+  border-top: 1.5px solid #ecedee;
 }
 
 .events-content {
-  max-width: 1400px;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1em;
@@ -114,11 +117,12 @@
 
 .events-header {
   font-family: "EB Garamond", serif;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 1.4em;
   display: flex;
   justify-content: center;
   padding-top: 0.7em;
+  color: #3c4d57;
 }
 
 .card-col {
@@ -128,19 +132,47 @@
 .card {
   margin-top: 1em;
   border-radius: 0;
-  font-family: "EB Garamond", serif;
   height: 100%;
   border: none;
+}
+.card-body {
+  padding-bottom: 0;
+} 
+
+.card-text {
+  font-family: 'Montserrat',
+  sans-serif;
+  font-size: 0.9em;
+}
+.card-alltext {
+  margin-top: auto;
+  display: flex; 
+  flex-direction: column;
+
 }
 
 .card-title {
   padding-top: 0.5em;
+  font-family: "EB Garamond", serif;
+  font-size: 1.2em;
+  font-weight: 700;
+  color: #3c4d57;
+}
+.d-block {
+  opacity: 0.9;
+}
+.weight-medium {
+  font-weight: 500;
+  margin-top: auto;
+}
+.info-btn {
+  border-color: #3c4d57;
 }
 
 /******************************* Gallery *******************************/
 .gallery-container {
   padding-bottom: 2em;
-  border-top: 1.5px solid #e6e6e6;
+  border-top: 1.5px solid #ecedee;
 }
 
 .gallery-margin {
@@ -162,11 +194,11 @@
 .gallery-header {
   font-family: "EB Garamond", serif;
   font-size: 1.5em;
-  color: #333333;
+  color: #212529;
   padding: 0.5em 0em 0.3em;
   width: 100%;
   margin: 0;
-
+  font-weight: 700;
 }
 
 /******************************* Contact *******************************/
@@ -197,7 +229,7 @@
 }
 
 .contact-sub-header {
-  color: black;
+  color: #3c4d57;
   font-size: 1.1em;
 }
 
@@ -225,13 +257,17 @@
   width: 100%;
 }
 
+.carousel {
+  max-width: 1400px;
+  margin: auto;
+}
 
 /******************************* Footer *******************************/
 
 .footer-row {
   padding: 2em 1em;
   text-align: center;
-  border-top: 1.5px solid #e6e6e6;
+  border-top: 1.5px solid #ecedee;
 }
 
 .tablet-footer,
@@ -249,12 +285,12 @@
 
 .footer-header {
   font-weight: 700;
-  color: #262626;
+  color: #3c4d57;
 }
 
 .footer-icon {
   font-size: 1.5em;
-  color: #262626;
+  color: #3c4d57;
 }
 
 .footer-form {
@@ -262,8 +298,9 @@
 
 }
 
-.form-control {
-  border-color: #343A40;
+.form-control,
+.footer-form {
+  border-color: #bdbdbd;
 }
 
 .form-group {
@@ -304,7 +341,8 @@
 
   /* gallery */
   .gallery-image {
-    padding: 0.5em;
+    padding: 0.5em 0.5em 1em;
+    opacity: 0.9;
   }
 
   /* MULTIPLE */
@@ -320,13 +358,14 @@
   .banner-container {
     display: block;
     padding: 0px;
-    border-bottom: 1.5px solid #e6e6e6;
+    border-bottom: 1.5px solid #ecedee;
   }
 
   .banner-text {
     font-size: 0.9em;
     margin-left: -1.5em;
     padding-top: 0.7em;
+    font-family: 'Roboto', sans-serif;
   }
 
   /* home images */
@@ -376,6 +415,8 @@
   /* navigation */
   .nav-sub-header {
     font-size: 1em;
+    font-family: 'Roboto',
+      sans-serif;
   }
 
   .nav-social-icon {
