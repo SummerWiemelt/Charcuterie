@@ -54,7 +54,7 @@
   height: 8rem;
   width: 10rem;
   font-size: 1.3em;
-  font-family: "EB Garamond", serif;
+  font-family: "EB Garamound", serif;
 }
 
 .btn-outline-dark:hover {
@@ -146,11 +146,11 @@
   sans-serif;
   font-size: 0.9em;
 }
+
 .card-alltext {
   margin-top: auto;
   display: flex; 
   flex-direction: column;
-
 }
 
 .card-title {
@@ -168,7 +168,9 @@
   margin-top: auto;
 }
 .info-btn {
-  border-color: #3c4d57;
+  border-color: #bdbdbd;
+  color: #4d4d4d;
+  font-family: "Montserrat", sans-serif;
 }
 
 /******************************* Gallery *******************************/
@@ -224,47 +226,47 @@
   font-size: 1.4em;
 }
 
+.contact-row {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .contact-col {
   display: flex;
   flex-direction: column;
   text-align: center;
   font-family: "EB Garamond", serif;
-  padding: 1em 0em;
+  padding: 1em 0em 0em;
+  margin-top: 1.5em;
 }
 
 .contact-sub-header {
   color: #3c4d57;
-  font-size: 1.1em;
+  font-size: 1.3em;
 }
 
-.contact-img-col {
-  padding: 0em 3em;
+.contact-text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9em;
 }
 
-.contact-img {
-  opacity: 0.8;
+.accordion {
+  padding-bottom: 2em;
 }
-
-.story-row {
-  padding: 0em 0em 2em;
-  margin: 0;
-}
-
-.story-text {
+.faq-header {
   font-family: "EB Garamond", serif;
-  padding-top: 1em;
+  font-size: 0.6em;
 }
 
-.story-img {
-  padding-top: 1em;
-  opacity: 0.8;
-  width: 100%;
+.faq-text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9em;
+  padding-left: 2.2em;
 }
 
-.carousel {
-  max-width: 1400px;
-  margin: auto;
-}
+
+
 
 /******************************* Footer *******************************/
 
@@ -287,6 +289,12 @@
   font-family: "EB Garamond", serif;
 }
 
+.footer-text {
+  font-family: "montserrat", sans-serif;
+  font-size: 0.85em;
+  padding-top: 0.45em;
+}
+
 .footer-header {
   font-weight: 700;
   color: #3c4d57;
@@ -295,11 +303,14 @@
 .footer-icon {
   font-size: 1.5em;
   color: #3c4d57;
+  padding-top: 0.25em;
 }
 
 .footer-form {
   opacity: 0.7;
-
+  font-family: "montserrat",
+  sans-serif;
+  font-size: 0.9em;
 }
 
 .form-control,

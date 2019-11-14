@@ -1,5 +1,7 @@
-// Navigation
+/*********************************** Navigation **********************************/
 const pageIds = {
+  reservationPage: "reservation-content",
+  reservationButton: "reservation-button",
   menuPage: "menu-content",
   menuButton: "menu-button",
   eventsPage: "events-content",
@@ -7,9 +9,7 @@ const pageIds = {
   galleryPage: "gallery-content",
   galleryButton: "gallery-button",
   contactPage: "contact-content",
-  contactButton: "contact-button",
-  reservationPage: "reservation-content",
-  reservationButton: "reservation-button"
+  contactButton: "contact-button"
 };
 const displayClass = "display-none";
 
@@ -70,7 +70,8 @@ const PageObjects = [
 
 showPage(pageIds.reservationPage);
 
-// Menu
+/*********************************** Menu **********************************/
+// Breakfast 
 var breakfastBeginnings = [
   ["Avacado Toast", "Homeade bread of your choice (rye, wheat, or crossiont topped with seasoned avacado and a basted egg", "$9"],
   ["Gourmet Yogurt Parfait", "Description", "Price"],
@@ -93,6 +94,8 @@ for (var i = 0; i < breakfastBeginnings.length; i++) {
 }
 
 breakfastBeginningsContainer.innerHTML = menuItems;
+
+// Lunch
 
 var lunchMenuItems = [
   ["food", "description", "price"],
@@ -118,7 +121,36 @@ for (var i = 0; i < lunchMenuItems.length; i++) {
 
 lunchContainer.innerHTML = menuItems;
 
-// Gallery 
+/*********************************** Events  **********************************/
+var eventsContent = [
+  ["./items/Events/fancy-macaroons.jpg", "Learn to Bake the Perfect Cake", "Join pastry chef Christina Tocci in a cake baking class.", "Saturday, October 5th. 6-9pm", "More Info"],
+  ["./items/events/wine-tasting.jpg", "Cheese and Wine Tasting", "Come taste our finest cheeses and wines.", "Sunday, October 6th. 6-8pm", "More Info"],
+  ["/items/Events/city-event.jpg", "Join us at the Fall Festival", "Food, shopping, music and more! Come find our booth.", "Saturday, October 12th. 10am-9pm", "More Info"],
+  ["./items/Events/girls-talking.jpg", "Sip and Social", "Bring your friends and enjoy drinks and o'dourves.", "Thursday, October 17th. 7-9pm", "More Info"],
+  ["./items/Events/pretty-salad.jpg", "The Basics of French Cuisine", "Cooking course with Chef Luis. Level II.", "Sunday, October 20th. 6-9pm", "More Info"],
+  ["./items/Events/woman-smiling.jpg", "Hiring Event", "On-the-spot interviews. Hiring chefs, servers, and dishwashers.", "Monday, October 21st. 1-4pm", "More Info"],
+  ["./items/Events/cheese.jpg", "Cheese Making and Tasting", "Learn the craft of cheese making with Chef Luis.", "Sunday, October 27th. 11am-2pm", "More Info"],
+  ["./items/Events/charcuterie.jpg", "Learn the Art of Charcuterie", "Join us in learning all about our speciality, charcuterie.", "Saturday, November 2nd. 5-8pm", "More Info"],
+  ["./items/Events/bread-oven.jpg", "Bread Baking with Chef Mike", "Learn to bake croissants, pan de campagne and pain au chocolat.", "Sunday, November 3rd. 4-8pm", "More Info"],
+  ["./items/Events/table-notepad.jpg", "3rd Annual Speed Dating Event", "Our most popular event! 24 5min rounds, plus free drinks.", "Friday, October 8th. 6:30-9pm", "More Info"]
+]
+
+var eventsContentContainer = document.getElementById("eventsContent")
+eventsItem = "";
+eventsItem += '<div class="row">';
+for (var i = 0; i < eventsContent.length; i++) {
+  eventsItem += '<div class="col-sm-6 col-lg-4 card-col">' + '<div class="card">' + '<div class="card-body shadow">' + '<img src="' + eventsContent[i][0] +'"' + 'class="d-block w-100 shadow">';
+  eventsItem += '<div class="card-alltext">' + '<h5 class="card-title">' + eventsContent [i][1] + '</h5>';
+  eventsItem += '<p class="card-text">' + eventsContent [i][2] + '<br><br>';
+  eventsItem += '<span class="weight-medium">' + eventsContent [i][3] + '</span></p>';
+  eventsItem += '<a href="#" class="btn btn-outline-dark info-btn">' + eventsContent[i][4] +'</a>' + '</div>' + '</div>' + '</div>' + '</div>';
+}
+eventsItem += "</div>"
+
+eventsContentContainer.innerHTML = eventsItem;
+
+
+/*********************************** Gallery **********************************/
 var galleryContent = [
   ["./items/Gallery Images/restaurant-plate.jpg"],
   ["./items/Gallery Images/salmon-dish.jpg"],
@@ -151,6 +183,6 @@ galleryImage += "</div>"
 galleryContentContainer.innerHTML = galleryImage;
 
 
-// TO DO: make menu a function + add dinner section
+// TO DO 
 // hide footer on mobile contact page 
-// reservation page */
+// adjust footer on reservation - tablet 
