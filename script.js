@@ -211,8 +211,12 @@ class FAQObject {
     this.inactiveClass = "collapsed"
   }
 
-  getActiveClass() {
-    return question.isActive ? question.activeClass : question.inactiveClass
+  getActiveClass(forElement) {
+    if (forElement == "forShow") {
+      return question.isActive ? question.activeClass : "";
+    } else {
+      return question.isActive ? "" : question.inactiveClass
+    }
   }
 }
 
@@ -221,21 +225,21 @@ questionOne = new FAQObject(
   "How often does the menu change?",
   " Our menu uses in-season ingredients from local farms. Due to the changing nature of our ingredients, our menu changes on a monthly basis.",
   "headingOne",
-  "show",
+  true,
   "collapseOne"
 )
 questionTwo = new FAQObject(
   "Where are your cooking classes held?",
   "We have a seperate kitchen where our cooking classes are held. Our head chefs rotate between teaching courses and cooking in our restaurant.",
   "headingTwo",
-  "collapsed",
+  false,
   "collapseTwo"
 )
 questionThree = new FAQObject(
   "Is there a dress code?",
   "We have a business casual dress code.",
   "headingThree",
-  "collapsed",
+  false,
   "collapseThree"
 )
 
@@ -253,10 +257,10 @@ for (var i = 0; i < questionsFAQ.length; i++) {
   faqHtml += '<div class="card">';
   faqHtml += '<div class="card-header" id="' + question.id_and_arialabel + '">';
   faqHtml += '<h2 class="mb-0">';
-  faqHtml += '<button class="btn btn-link-dark ' + question.getActiveClass() + ' faq-header" type="button" data-toggle="collapse" data-target="#' + question.dataTarget + '" aria-expanded="true" aria-controls="' + question.dataTarget + '">' + question.question + '</button>';
+  faqHtml += '<button class="btn btn-link-dark ' + question.getActiveClass("forHide") + ' faq-header" type="button" data-toggle="collapse" data-target="#' + question.dataTarget + '" aria-expanded="true" aria-controls="' + question.dataTarget + '">' + question.question + '</button>';
   faqHtml += '</h2>';
   faqHtml += '</div>';
-  faqHtml += '<div id="' + question.dataTarget + '" class="collapse' + question.getActiveClass() + '" aria-labelledby="' + question.id_and_arialabel + '" data-parent="#accordionExample"><div class="card-body faq-text">' + question.answer + '</div>';
+  faqHtml += '<div id="' + question.dataTarget + '" class="collapse' + question.getActiveClass("forShow") + '" aria-labelledby="' + question.id_and_arialabel + '" data-parent="#accordionExample"><div class="card-body faq-text">' + question.answer + '</div>';
   faqHtml += '</div>';
   faqHtml += '</div>';
 }
