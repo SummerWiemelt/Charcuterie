@@ -139,11 +139,11 @@ var eventsContentContainer = document.getElementById("eventsContent")
 eventsItem = "";
 eventsItem += '<div class="row">';
 for (var i = 0; i < eventsContent.length; i++) {
-  eventsItem += '<div class="col-sm-6 col-lg-4 card-col">' + '<div class="card">' + '<div class="card-body shadow">' + '<img src="' + eventsContent[i][0] +'"' + 'class="d-block w-100 shadow">';
-  eventsItem += '<div class="card-alltext">' + '<h5 class="card-title">' + eventsContent [i][1] + '</h5>';
-  eventsItem += '<p class="card-text">' + eventsContent [i][2] + '<br><br>';
-  eventsItem += '<span class="weight-medium">' + eventsContent [i][3] + '</span></p>';
-  eventsItem += '<a href="#" class="btn btn-outline-dark info-btn">' + eventsContent[i][4] +'</a>' + '</div>' + '</div>' + '</div>' + '</div>';
+  eventsItem += '<div class="col-sm-6 col-lg-4 card-col">' + '<div class="card">' + '<div class="card-body shadow">' + '<img src="' + eventsContent[i][0] + '"' + 'class="d-block w-100 shadow">';
+  eventsItem += '<div class="card-alltext">' + '<h5 class="card-title">' + eventsContent[i][1] + '</h5>';
+  eventsItem += '<p class="card-text">' + eventsContent[i][2] + '<br><br>';
+  eventsItem += '<span class="weight-medium">' + eventsContent[i][3] + '</span></p>';
+  eventsItem += '<a href="#" class="btn btn-outline-dark info-btn">' + eventsContent[i][4] + '</a>' + '</div>' + '</div>' + '</div>' + '</div>';
 }
 eventsItem += "</div>"
 
@@ -181,6 +181,94 @@ for (var i = 0; i < galleryContent.length; i++) {
 galleryImage += "</div>"
 
 galleryContentContainer.innerHTML = galleryImage;
+
+/* Contact - FAQ
+ var faqContent = [
+   ["How often does the menu change?", " Our menu uses in-season ingredients from local farms. Due to the changing nature of our ingredients, our menu changes on a monthly basis."],
+   ["Where are your cooking classes held?", "We have a seperate kitchen where our cooking classes are held. Our head chefs rotate between teaching courses and cooking in our restaurant."],
+   ["Is there a dress code?", "We have a business casual dress code."],
+   ["faq", "description"],
+   ["faq", "description"]
+ ] */
+
+// var faqCollapse = [
+//   ["headingOne", "", "collapseOne", "show"],
+//   ["headingTwo", "collapsed", "collapseTwo", ""],
+//   ["headingThree", "collapsed", "collapseThree", ""],
+//   ["headingFour", "collapsed", "collapseFour", ""],
+//   ["headingFive", "collapsed", "collapseFive", ""]
+// ]
+
+class FAQObject {
+  constructor(question, answer, id_and_arialabel, isActive, dataTarget) {
+    this.question = question;
+    this.answer = answer;
+    this.id_and_arialabel = id_and_arialabel;
+    this.isActive = isActive;
+    this.dataTarget = dataTarget;
+
+    this.activeClass = "show"
+    this.inactiveClass = "collapsed"
+  }
+
+  getActiveClass() {
+    return question.isActive ? question.activeClass : question.inactiveClass
+  }
+}
+
+
+questionOne = new FAQObject(
+  "How often does the menu change?",
+  " Our menu uses in-season ingredients from local farms. Due to the changing nature of our ingredients, our menu changes on a monthly basis.",
+  "headingOne",
+  "show",
+  "collapseOne"
+)
+questionTwo = new FAQObject(
+  "Where are your cooking classes held?",
+  "We have a seperate kitchen where our cooking classes are held. Our head chefs rotate between teaching courses and cooking in our restaurant.",
+  "headingTwo",
+  "collapsed",
+  "collapseTwo"
+)
+questionThree = new FAQObject(
+  "Is there a dress code?",
+  "We have a business casual dress code.",
+  "headingThree",
+  "collapsed",
+  "collapseThree"
+)
+
+questionsFAQ = [
+  questionOne,
+  questionTwo,
+  questionThree
+]
+
+
+var faqContainer = document.getElementById("faqItems")
+faqHtml = '<div class="accordion" id="accordionExample">';
+for (var i = 0; i < questionsFAQ.length; i++) {
+  question = questionsFAQ[i]
+  faqHtml += '<div class="card">';
+  faqHtml += '<div class="card-header" id="' + question.id_and_arialabel + '">';
+  faqHtml += '<h2 class="mb-0">';
+  faqHtml += '<button class="btn btn-link-dark ' + question.getActiveClass() + ' faq-header" type="button" data-toggle="collapse" data-target="#' + question.dataTarget + '" aria-expanded="true" aria-controls="' + question.dataTarget + '">' + question.question + '</button>';
+  faqHtml += '</h2>';
+  faqHtml += '</div>';
+  faqHtml += '<div id="' + question.dataTarget + '" class="collapse' + question.getActiveClass() + '" aria-labelledby="' + question.id_and_arialabel + '" data-parent="#accordionExample"><div class="card-body faq-text">' + question.answer + '</div>';
+  faqHtml += '</div>';
+  faqHtml += '</div>';
+}
+faqHtml += '</div>'
+
+faqContainer.innerHTML = faqHtml;
+
+
+
+
+
+
 
 
 // TO DO 
