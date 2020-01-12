@@ -1,5 +1,5 @@
 /*********************************** Navigation **********************************/
-const pageIds = {
+const pageIds = { 
   reservationPage: "reservation-content",
   reservationButton: "reservation-button",
   menuPage: "menu-content",
@@ -13,7 +13,7 @@ const pageIds = {
 };
 const displayClass = "display-none";
 
-class HtmlHelper {
+class HtmlHelper { 
   hide(element) {
     element.classList.add(displayClass);
   }
@@ -51,10 +51,18 @@ class Page {
     // If object id is equal to passed in id, remove hide classList
     if (this.pageId == pageId) {
       htmlHelper.show(this.pageElement);
+      if (pageId == pageIds.reservationPage) {
+        const footerRow = document.getElementById("footer-row")
+        // footerRow.classList.add("footer-row")
+      }
     }
     // else add hide class to classList
     else {
       htmlHelper.hide(this.pageElement);
+      if (pageId == pageIds.reservationPage) {
+        const footerRow = document.getElementById("footer-row")
+        // footerRow.classList.remove("footer-row")
+      }
     }
     return true;
   }
@@ -74,10 +82,10 @@ showPage(pageIds.reservationPage);
 // Breakfast 
 var breakfastBeginnings = [
   ["Avacado Toast", "Homeade bread of your choice (rye, wheat, or crossiont topped with seasoned avacado and a basted egg", "$9"],
-  ["Gourmet Yogurt Parfait", "Description", "Price"],
-  ["Stuffed French Toast", "Description", "Price"],
-  ["Eggs Benedict", "Description", "Price"],
-  ["Croissant Breakfast Sandwhich", "Description", "Price"]
+  ["Gourmet Yogurt Parfait", "Local vanilla yougurt, fresh seasonal berries, topped with cinammon spiced granola", "$8"],
+  ["Stuffed French Toast", "Fluffy french toast filled with a whipped banana walnut cream, topped with brulee banana and whipped cream", "$13"],
+  ["Eggs Benedict", "Two poached eggs on english muffins with a choice of smoked salmon or canadian bacon, covered in hollandaise sauce", "$13"],
+  ["Croissant Breakfast Sandwhich", "Homeade croissant sandwich with turkey, swiss, lettuce, tomato, red onion, and avacado smothered in a spicy mayonnaise", "$12"]
 ]
 var breakfastBeginningsContainer = document.getElementById("BreakfastMenuItems")
 menuItems = "";
@@ -98,12 +106,12 @@ breakfastBeginningsContainer.innerHTML = menuItems;
 // Lunch
 
 var lunchMenuItems = [
-  ["food", "description", "price"],
-  ["food", "description", "price"],
-  ["food", "description", "price"],
-  ["food", "description", "price"],
-  ["food", "description", "price"],
-  ["food", "description", "price"]
+  ["Soup of the day", "Choose from a cup or a bowl of our soup of the day. Changes weekly, and is created in house with the freshest available seasonal ingredients", "$9-13"],
+  ["French Country Salad", "Goat cheese, asparagus, beets and pecans served over locally grown arugula. Served with a mustard vinaigrette", "$9"],
+  ["Buttermilk fried shrimp", "Fresh shrimp served with a cabbage slaw and a sesame vinaigrette. Comes with a choice of fresh bread", "13"],
+  ["Escargot", "Burgundy snails, garlic butter and toasted bread crumbs", "$13"],
+  ["Pate charcuterie", "Duck and chicken confit served with warm brie and homeade breads", "$15"],
+  ["French dip", "Delicate roast beef, carmelized onions and a horseradish crème served on a fresh homeade roll", "$15"]
 ]
 
 var lunchContainer = document.getElementById("lunchMenuItems")
@@ -120,6 +128,34 @@ for (var i = 0; i < lunchMenuItems.length; i++) {
 }
 
 lunchContainer.innerHTML = menuItems;
+
+// Dinner
+
+var dinnerMenuItems = [
+  ["Foie Gras", "Apricot gastrique and toasted brioche", "$15"],
+  ["Pan Roasted chicken and Vegetables", "Organic locally sourced chicken with crispy skin. Served with artichoke hearts, marbled potatos and roasted garlic and herbs", "$21"],
+  ["Bouillabaisse", "Red snapper, lobster, clams, and shrimp served in a delicate stew with locally sourced vegetables. Side of marbled potatoes", "$25"],
+  ["Slow Roasted Salmon and Herbs", "Salmon served with a white wine vinaigrette, pancetta braised lentills and fresh herbs", "$26"],
+  ["Filet Mignon", "Locally sourced filet mignon, tossed arugula salad, and buttery mashed potatoes", "$28"],
+  ["Rosemary Braised Lamb Shank", "Locally sourced lamb served with a red wine reduction, local wild mushrooms, roasted baby carrots, and a creamy blue cheese polenta", "$28"]
+]
+
+var dinnerContainer = document.getElementById("dinnerMenuItems")
+menuItems = "";
+for (var i = 0; i < dinnerMenuItems.length; i++) {
+  menuItems += '<div class="row justify-content-between menu-row">';
+  menuItems += '<div class="col-xs-6 menu-item">' + dinnerMenuItems[i][0] + '</div>';
+  menuItems += '<div class="col-xs-6">' + dinnerMenuItems[i][2] + '</div>';
+  menuItems += '</div>';
+  menuItems += '<div class="row menu-row">';
+  menuItems += '<div class="col-xs-6 menu-item-description">' + dinnerMenuItems[i][1] + '</div>';
+  menuItems += '</div>';
+  menuItems += '<hr class="menu-divider">';
+}
+
+dinnerContainer.innerHTML = menuItems;
+
+
 
 /*********************************** Events  **********************************/
 var eventsContent = [
@@ -139,7 +175,7 @@ var eventsContentContainer = document.getElementById("eventsContent")
 eventsItem = "";
 eventsItem += '<div class="row">';
 for (var i = 0; i < eventsContent.length; i++) {
-  eventsItem += '<div class="col-sm-6 col-lg-4 card-col">' + '<div class="card">' + '<div class="card-body shadow">' + '<img src="' + eventsContent[i][0] + '"' + 'class="d-block w-100 shadow">';
+  eventsItem += '<div class=" col-lg-6 card-col">' + '<div class="card">' + '<div class="card-body shadow">' + '<img src="' + eventsContent[i][0] + '"' + 'class="d-block w-100 shadow">';
   eventsItem += '<div class="card-alltext">' + '<h5 class="card-title">' + eventsContent[i][1] + '</h5>';
   eventsItem += '<p class="card-text">' + eventsContent[i][2] + '<br><br>';
   eventsItem += '<span class="weight-medium">' + eventsContent[i][3] + '</span></p>';
@@ -182,24 +218,8 @@ galleryImage += "</div>"
 
 galleryContentContainer.innerHTML = galleryImage;
 
-/* Contact - FAQ
- var faqContent = [
-   ["How often does the menu change?", " Our menu uses in-season ingredients from local farms. Due to the changing nature of our ingredients, our menu changes on a monthly basis."],
-   ["Where are your cooking classes held?", "We have a seperate kitchen where our cooking classes are held. Our head chefs rotate between teaching courses and cooking in our restaurant."],
-   ["Is there a dress code?", "We have a business casual dress code."],
-   ["faq", "description"],
-   ["faq", "description"]
- ] */
-
-// var faqCollapse = [
-//   ["headingOne", "", "collapseOne", "show"],
-//   ["headingTwo", "collapsed", "collapseTwo", ""],
-//   ["headingThree", "collapsed", "collapseThree", ""],
-//   ["headingFour", "collapsed", "collapseFour", ""],
-//   ["headingFive", "collapsed", "collapseFive", ""]
-// ]
-
-class FAQObject {
+/*********************************** Contact FAQ **********************************/
+class FAQObject {  
   constructor(question, answer, id_and_arialabel, isActive, dataTarget) {
     this.question = question;
     this.answer = answer;
@@ -219,7 +239,6 @@ class FAQObject {
     }
   }
 }
-
 
 questionOne = new FAQObject(
   "How often does the menu change?",
@@ -242,11 +261,43 @@ questionThree = new FAQObject(
   false,
   "collapseThree"
 )
+questionFour = new FAQObject(
+  "Is there parking available?",
+  'Restaurant customers may park in our front parking lot, or use our free curbside valet service. Those attending our cooking classes should park in our back parking lot and use the back door labeled "classes".',
+  "headingFour",
+  false,
+  "collapseFour"
+)
+questionFive = new FAQObject(
+  "Do I need a reservation?",
+  "We recommend getting a reservation on weekend nights and for parties greater than 6.",
+  "headingFive",
+  false,
+  "collapseFive"
+)
+questionSix = new FAQObject(
+  "What type of happy hour deals do you have?",
+  "We pride ourselves in having a phenominal happy hour selection. We offer $2 beers and drinks, and half off appetizers and specials.",
+  "headingSix",
+  false,
+  "collapseSix"
+)
+questionSeven = new FAQObject(
+  "Are children welcome?",
+  "Children are welcome to our restaurant, however, we require participants of our classes to be 18 or older due to the frequency we cook with and taste alcohol.",
+  "headingSeven",
+  false,
+  "collapseSeven"
+)
 
 questionsFAQ = [
   questionOne,
   questionTwo,
-  questionThree
+  questionThree,
+  questionFour,
+  questionFive,
+  questionSix,
+  questionSeven
 ]
 
 
@@ -267,14 +318,3 @@ for (var i = 0; i < questionsFAQ.length; i++) {
 faqHtml += '</div>'
 
 faqContainer.innerHTML = faqHtml;
-
-
-
-
-
-
-
-
-// TO DO 
-// hide footer on mobile contact page 
-// adjust footer on reservation - tablet 

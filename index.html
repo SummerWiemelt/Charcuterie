@@ -38,7 +38,7 @@
 
   <!-- Collapsable Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light">
-    <a id="reservation-button" class="navbar-brand nav-header" href="#">Charcuterie</a>
+    <a id="reservation-button" class="navbar-brand nav-header link" href="#">Charcuterie</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
       aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -46,16 +46,16 @@
 
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <li id="menu-button" class="nav-item active">
+        <li id="menu-button" class="nav-item">
           <a class="nav-link nav-sub-header" href="#">Menu</a>
         </li>
-        <li id="events-button" class="nav-item active">
+        <li id="events-button" class="nav-item">
           <a class="nav-link nav-sub-header" href="#">Events</a>
         </li>
-        <li id="gallery-button" class="nav-item active">
+        <li id="gallery-button" class="nav-item">
           <a class="nav-link nav-sub-header" href="#">Gallery</a>
         </li>
-        <li id="contact-button" class="nav-item active">
+        <li id="contact-button" class="nav-item">
           <a class="nav-link nav-sub-header" href="#">Contact</a>
         </li>
       </ul>
@@ -68,7 +68,6 @@
 
   <!-- Home/Reservations -->
   <div id="reservation-content" class="container-fluid reservation-container">
-
     <div class="row">
       <div class="col-sm no-mobile-home-image no-mobile-padding">
         <img src="./items/Home /left-home-page.jpg" alt="Soup" class="home-images" />
@@ -114,15 +113,26 @@
       </div>
       <div class="container" id="lunchMenuItems">
       </div>
+
+      <div class="row justify-content-between">
+        <div class="col menu-sub-header">
+          <div>
+            <h5>Dinner</h5>
+          </div>
+        </div>
+      </div>
+      <div class="container" id="dinnerMenuItems">
+      </div>
+
     </div>
   </div>
 
-  <!-- Dynamic Events-->
-  <div id="events-content" class="events-border display-none">
-    <div class="events-content">
-      <div class="container-fluid"><span class="events-header">Upcoming Events</span>
-        <div id="eventsContent"></div>
-      </div>
+  <!-- Events-->
+  <div id="events-content" class="events-content events-border display-none">
+    <div class="container-fluid events-container shadow"><span class="events-header">Upcoming Events</span>
+      <hr class="divider events-divider">
+      <div id="eventsContent"></div>
+
       <div class="events-header"><a href="#" class="btn btn-outline-dark info-btn">Click Here to See Past
           Events</a></div>
     </div>
@@ -158,7 +168,7 @@
 </div>
 </div> -->
 
-  <!-- Gallery (JS dynamic) -->
+  <!-- Gallery -->
   <div id="gallery-content" class="container-flex gallery-container">
     <span class="row justify-content-center gallery-header">Gallery</span>
     <div class="container" id="galleryItems">
@@ -167,8 +177,8 @@
 
 
   <!-- Contact -->
-  <div id="contact-content" class="display-none contact-container">
-    <div class="container shadow contact-child-container">
+  <div id="contact-content" class="display-none contact-content">
+    <div class="container shadow contact-container">
       <div class="row justify-content-center contact-header-row">
         <div>
           <span class="contact-header">General Information</span>
@@ -182,7 +192,7 @@
         </div>
         <div class="col-xl-4 contact-col">
           <h6 class="contact-sub-header">Hours</h6>
-          <p class="contact-text">M-Th 11:00am-10:00pm<br>Fri, Sat 9:30am-11:30pm<br>Sun 10:00am-9:00pm</p>
+          <p class="contact-text">M-Th 9:30am-10:00pm<br>Fri, Sat 9:30am-11:30pm<br>Sun 10:00am-9:00pm</p>
         </div>
         <div class="col-xl-4 contact-col">
           <h6 class="contact-sub-header">Happy Hour</h6>
@@ -202,7 +212,7 @@
 
   <!-- Footer -->
   <div class="container-fluid footer-container">
-    <div class="row d-flex footer-row justify-content-center">
+    <div id="footer-row" class="row d-flex footer-row justify-content-center">
       <div class="col-xs-2 tablet-footer">
         <h5 class="footer-header footer-content">Charcuterie</h5>
         <i class="fab fa-pagelines footer-icon"></i>
@@ -247,12 +257,6 @@
         </form>
       </div>
     </div>
-
-
-
-
-
-
 
     <!--End-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
