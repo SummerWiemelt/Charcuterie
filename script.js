@@ -1,4 +1,5 @@
 /*********************************** Navigation **********************************/
+
 const pageIds = { 
   reservationPage: "reservation-content",
   reservationButton: "reservation-button",
@@ -13,56 +14,46 @@ const pageIds = {
 };
 const displayClass = "display-none";
 
+
+// Hide and show by class 
 class HtmlHelper { 
   hide(element) {
-    element.classList.add(displayClass);
+    element.classList.add(displayClass); // add display-none
   }
-  show(element) {
-    element.classList.remove(displayClass);
+  show(element) { 
+    element.classList.remove(displayClass); 
   }
 }
-const htmlHelper = new HtmlHelper()
+// Instantiating htmlHelper 
+const htmlHelper = new HtmlHelper() 
 
+
+// Execute on load - Loop through pageId's to show or hide 
 function showPage(pageId) {
-  // Purpose: to execute on the load of the page and hide any pages that should be hidden based on the url, and show any pages that should be shown.
-  // PageObjects
-  for (var i = 0; i < PageObjects.length; i++) {
+  for (var i = 0; i < PageObjects.length; i++) { 
     var pageObject = PageObjects[i];
-    pageObject.shouldShow(pageId);
+    pageObject.shouldShow(pageId); 
   }
-  // loop through list of page objects and ask page to determine if it should be shown.
-  // Depending on what the object determines, it will either show itself or hide itself.
 }
 
-class Page {
+
+class Page { 
   constructor(pageId, pageButtonId) {
     this.pageId = pageId;
     this.pageElement = document.getElementById(this.pageId);
     this.pageButtonElement = document.getElementById(pageButtonId);
-    this.pageButtonElement.addEventListener("click", () => {
+    this.pageButtonElement.addEventListener("click", () => { // on click the correct page is displayed - and loops through the page ids 
       showPage(this.pageId)
     });
   }
-
   shouldShow(pageId) {
-    if (!this.pageElement) {
-      return false;
-    }
     // If object id is equal to passed in id, remove hide classList
-    if (this.pageId == pageId) {
-      htmlHelper.show(this.pageElement);
-      if (pageId == pageIds.reservationPage) {
-        const footerRow = document.getElementById("footer-row")
-        // footerRow.classList.add("footer-row")
-      }
+    if (this.pageId === pageId) {
+      htmlHelper.show(this.pageElement); 
     }
     // else add hide class to classList
     else {
       htmlHelper.hide(this.pageElement);
-      if (pageId == pageIds.reservationPage) {
-        const footerRow = document.getElementById("footer-row")
-        // footerRow.classList.remove("footer-row")
-      }
     }
     return true;
   }
@@ -76,7 +67,12 @@ const PageObjects = [
   new Page(pageIds.reservationPage, pageIds.reservationButton)
 ];
 
+
+// On init default to reservation/home page 
 showPage(pageIds.reservationPage);
+
+
+
 
 /*********************************** Menu **********************************/
 // Breakfast 
@@ -157,6 +153,7 @@ dinnerContainer.innerHTML = menuItems;
 
 
 
+
 /*********************************** Events  **********************************/
 var eventsContent = [
   ["./items/Events/fancy-macaroons.jpg", "Learn to Bake the Perfect Cake", "Join pastry chef Christina Tocci in a cake baking class.", "Saturday, October 5th. 6-9pm", "More Info"],
@@ -184,6 +181,8 @@ for (var i = 0; i < eventsContent.length; i++) {
 eventsItem += "</div>"
 
 eventsContentContainer.innerHTML = eventsItem;
+
+
 
 
 /*********************************** Gallery **********************************/
@@ -217,6 +216,8 @@ for (var i = 0; i < galleryContent.length; i++) {
 galleryImage += "</div>"
 
 galleryContentContainer.innerHTML = galleryImage;
+
+
 
 /*********************************** Contact FAQ **********************************/
 class FAQObject {  
